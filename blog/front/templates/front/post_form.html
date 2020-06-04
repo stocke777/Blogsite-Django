@@ -1,0 +1,15 @@
+{%extends 'front/base.html'%}
+{%load crispy_forms_tags%}
+{%block content%}
+
+    <form method = "POST" class = "container form-group">
+        {%csrf_token%}
+        <legend class="text-black">Blog Post</legend>
+        {{form|crispy}}
+        <button class = "btn btn-primary">Post</button>
+        <br><br>
+        
+    </form>
+
+
+{%endblock content%}

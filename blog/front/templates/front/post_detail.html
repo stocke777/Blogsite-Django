@@ -1,0 +1,19 @@
+{%extends 'front/base.html'%}
+
+{%block content%}
+    <div class="container mt-2">
+        <img src="{{post.author.profile.image.url}}" alt="" class="rounded-circle article-img" style="height: 40px; width:40px;">
+        <div class="d-inline-flex">
+            <div class="mt-2 bg-dark pl-2 pr-2 text-white mr-3"><h4>{{object.title}}</h1></div>
+                <div class="bg-light mt-2 p-2 text-black"><b><a href="{% url 'user_posts' object.author.username %}" style="color: black;">{{object.author}}</a></b></div>
+            <div class="bg-light mt-2 p-2 text-black"><b>{{object.date_posted}}</b></div>
+        </div>
+        <div class="bg-dark p-2 text-white">
+            <p>{{object.content}}</p>
+        </div>
+        {%if object.author == user %}
+            <a class = "btn btn-secondary m-1" href="{%url 'post-update' object.id%}">Update</a>
+            <a class = "btn btn-danger m-1" href="{%url 'post-delete' object.id%}">Delete</a>
+        {%endif%}
+    </div>
+{%endblock content%}

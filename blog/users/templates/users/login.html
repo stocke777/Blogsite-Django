@@ -1,0 +1,19 @@
+{%extends 'front/base.html'%}
+{%load crispy_forms_tags%}
+{%block content%}
+
+    <form method = "POST" class = "container form-group">
+        {%csrf_token%}
+        <legend class="text-black">LOG IN</legend>
+        {{form|crispy}}
+        <button class = "btn btn-primary">Login</button>
+        <br>
+        <small class="test-muted">
+            <a href="{%url 'password_reset'%}">Forgot Password</a>
+        </small>
+        <br><br>
+        <p>Need an Account? <span><a href = "register" class = "text-blue">Sign Up</a></span></p>
+    </form>
+
+
+{%endblock content%}

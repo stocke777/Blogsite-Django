@@ -1,0 +1,17 @@
+{%extends 'front/base.html'%}
+{%load crispy_forms_tags%}
+{%block content%}
+
+    <form method = "POST" class = "container form-group">
+        {%csrf_token%}
+        <legend class="text-black">Delete Post</legend>
+        <h2>You wanna delete the post {{ object.title }}</h2>
+        {{form|crispy}}
+        <button class = "btn btn-danger">Delete</button>
+        <a class = "btn btn-secondary" href="{%url 'post-detail' object.id %}">Cancel</a>
+        <br><br>
+        
+    </form>
+
+
+{%endblock content%}
