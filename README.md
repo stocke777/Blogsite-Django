@@ -1,10 +1,10 @@
 # Blogsite-Django
 ## https://thepsychocritique.herokuapp.com/
-### *Note: This is the website implemented with slight changes*
+### *Note: This is the website implemented with slight changes and random text and images*
 
 <br/>
 
-## Blogsite where Users create their own account and make Posts, update Profiles, sort post by User, etc
+## Responsive Blogsite where Users create their own account and make Posts, update Profiles, password reset, etc
 
 <br>
 
